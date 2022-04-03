@@ -1,7 +1,7 @@
 pub struct Solution;
 
 impl Solution {
-    pub fn solve(n: i32) -> Vec<String> {
+    pub fn generate_parentheses(n: i32) -> Vec<String> {
         let mut parentheses_tracker: Vec<String> = Vec::new();
         let mut usage_tracker : Vec<(i32, i32)> = Vec::new();
 
@@ -52,13 +52,4 @@ impl Solution {
         
         parentheses_tracker
     }
-}
-
-#[test]
-fn should_word() {
-    let result = Solution::solve(3);
-
-    println!("{:?}", result);
-
-    assert_eq!(4,5);
 }

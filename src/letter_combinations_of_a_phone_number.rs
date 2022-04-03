@@ -21,7 +21,7 @@ impl Solution {
         }
     }
 
-    pub fn letter_combinations(digits: String) -> Vec<String> {
+    pub fn solution(digits: String) -> Vec<String> {
         let mut all_letter_combinations: Vec<String> = Vec::new();
 
         for unit_key_character in digits.chars().map(|x| x.to_string()) {

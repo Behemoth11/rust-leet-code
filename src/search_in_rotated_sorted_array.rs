@@ -1,7 +1,7 @@
 pub struct Solution;
 
 impl Solution {
-    pub fn search(nums: Vec<i32>, target: i32) -> i32 {
+    pub fn solution(nums: Vec<i32>, target: i32) -> i32 {
         let len = nums.len();
 
         if len == 1 {
@@ -64,10 +64,3 @@ impl Solution {
     }
 }
 
-#[test]
-fn should_word() {
-    let result = Solution::search(vec![15, 32, 23, 0, 1, 2, 3, 5, 8, 9], 24);
-
-    println!("result {}", result);
-    assert_eq!(result, 4)
-}
