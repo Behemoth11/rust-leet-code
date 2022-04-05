@@ -1,25 +1,27 @@
+
+// https://leetcode.com/problems/two-sum/
+
 use std::collections::HashMap;
 
 pub struct Solution;
 
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        let mut cache: HashMap<i32, usize> = HashMap::new();
+        let mut reversed_map: HashMap<i32, usize> = HashMap::new();
 
         
-        for (number_idx, number) in nums.iter().enumerate() {
+        for (number_idx, number) in nums.into_iter().enumerate() {
             
-            let pair_idx = cache.get(&(target - number));
+            let expected_value = target - number;
 
-            if let Some(pair_idx) = pair_idx {
+            if let Some(pair_idx) = reversed_map.get(&expected_value) {
                 return vec![number_idx as i32, *pair_idx as i32];
             }
 
-
-            cache.insert(*number, number_idx);
+            reversed_map.insert(number, number_idx);
         }
 
-        return vec![0, 0];
+        unreachable!();
     }
 }
 
