@@ -2,6 +2,7 @@
 
 pub mod two_sums;
 pub mod fizzbuzz;
+pub mod longest_substring;
 pub mod linked_list_cycle;
 pub mod generate_parentheses;
 pub mod search_in_rotated_sorted_array;
